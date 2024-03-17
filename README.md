@@ -21,7 +21,7 @@ This is achieved using LoggingAdapter.
 ## Running example
 ### Using Docker
     docker build -t additional-endpoint-in-python-app .
-    docker start --name additional-endpoint-in-python-app -p 5000:5000 additional-endpoint-in-python-app
+    docker run --name additional-endpoint-in-python-app -p 5000:5000 additional-endpoint-in-python-app
 
 
 ### Using python
