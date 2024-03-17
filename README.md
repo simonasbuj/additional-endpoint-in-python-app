@@ -17,3 +17,19 @@ Because API thread has daemon set as True, it's gonna crash if main app in main 
 Logging is setup in json format, but most imporantly all serive runs have unique correlation id, that you can track.
 Even if more than 1 requests trigger service run at the same time, each of them gonna have unique logging.
 This is achieved using LoggingAdapter.
+
+## Running example
+### Using Docker
+    docker build -t additional-endpoint-in-python-app .
+    docker start --name additional-endpoint-in-python-app -p 5000:5000 additional-endpoint-in-python-app
+
+
+### Using python
+    pip install poetry
+    poetry install
+    poetry run python -B main.py
+
+### Available routes are
+    http://localhost:5000/health
+    http://localhost:5000/run-service
+
